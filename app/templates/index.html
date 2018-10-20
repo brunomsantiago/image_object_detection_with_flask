@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <form action="/" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" value="Upload">
+      <input type="submit" value="Upload">
+    </form>	
+
+    {% if notes %}
+        <style type="text/css" media="all">@import "static/css/annotation.css";</style>
+        <script type="text/javascript" src="static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="static/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="static/js/jquery.annotate.js"></script>
+
+	{% if filename %}
+		<img id="toAnnotate" src="{{'/quick_cache/{}'.format(filename)}}">
+	{% endif %}
+	
+        <script language="javascript">
+        $(window).load(function() {
+            $("#toAnnotate").annotateImage({
+            editable: false,
+            useAjax: false,
+            notes: [ {% for note in notes %}
+					 { "top": {{note.top}}, 
+                       "left": {{note.left}}, 
+                       "width": {{note.width}}, 
+                       "height": {{note.height}}, 
+                       "text": "{{note.text}}", 
+                       "id": "{{note.id}}", 
+                        "editable": false },  {% endfor %}  ]   
+                });
+              });
+        </script>
+	{% endif %}
+
+
+
+{% endblock %}
