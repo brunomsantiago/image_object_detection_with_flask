@@ -19,6 +19,8 @@ It is a very simple and unpolished flask website which the user can upload a fil
 - tensorflow (cpu version is fine)
 - werkzeug
 
+**Note:** It also uses [jquery-image-annotate](https://github.com/flipbit/jquery-image-annotate), however the relevant files are already part of this repository.
+
 #### 2.3. Build or download a tensorflow object detection model and labels
 For the demo I used:
 - **Model**: [ssd_mobilenet_v1_coco](http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2018_01_28.tar.gz) from [Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
