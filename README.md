@@ -1,4 +1,4 @@
-# Simple Obect Detection Inference with Flask and Tensorflow
+# Simple Image Object Detection Inference with Flask and Tensorflow
 
 This project is a study on how to deploy deep learning object detection models.
 It is a very simple and unpolished flask website which the user can upload a file and see the boxes of the detected objects. Hovering the mouse over the boxes shows the label and score.
