@@ -6,7 +6,7 @@ It is a very simple and unpolished flask website which the user can upload a fil
 
 ## 1. Demonstration
 
-TO DO: Gif
+![Demonstraion](https://github.com/brunomsantiago/simple_object_detection_with_flask/demo/flask_detection_demo.gif "Simple Obect Detection Inference with Flask and Tensorflow")
 
 ## 2. Installation
 
